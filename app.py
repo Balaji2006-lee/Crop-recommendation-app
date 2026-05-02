@@ -2,7 +2,8 @@ import streamlit as st
 import pickle
 import numpy as np
 
-model = pickle.load(open("model.pkl", "rb"))
+model_path = os.path.join(os.getcwd(), "model.pkl")
+model = pickle.load(open(model_path, "rb"))
 
 st.title("🌱 Easy Crop Recommendation App")
 
